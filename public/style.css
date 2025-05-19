@@ -1,0 +1,1625 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Modo Claro (padrão) */
+body.light-mode {
+    background: #f4f6f9;
+    color: #2a2a2a;
+}
+
+body.light-mode .container {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+body.light-mode .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e8ecef;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+body.light-mode .sidebar-header {
+    background: linear-gradient(135deg, #075e54 0%, #087d6e 100%);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode #nickname-area {
+    background: #ffffff;
+}
+
+body.light-mode #nickname-area button {
+    background: #075e54;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.light-mode #nickname-area button:hover {
+    background: #054d44;
+    transform: translateY(-1px);
+}
+
+body.light-mode #nickname-area button:disabled {
+    background: #b0bec5;
+    cursor: not-allowed;
+}
+
+body.light-mode #nickname-input {
+    border: 1px solid #dfe3e8;
+    background: #fafafa;
+    border-radius: 25px;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode #nickname-input:focus {
+    border-color: #075e54;
+    box-shadow: 0 0 5px rgba(7, 94, 84, 0.2);
+}
+
+body.light-mode #contacts li {
+    border-bottom: 1px solid #eef1f5;
+    transition: background 0.2s ease, padding 0.2s ease;
+}
+
+body.light-mode #contacts li:hover {
+    background: #f8fafc;
+    padding-left: 18px;
+}
+
+body.light-mode #add-contact-btn {
+    background: #075e54;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.light-mode #add-contact-btn:hover {
+    background: #054d44;
+    transform: translateY(-1px);
+}
+
+body.light-mode .chat {
+    background: #ebedf0;
+}
+
+body.light-mode .chat-header {
+    background: linear-gradient(135deg, #075e54 0%, #087d6e 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode .message {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+body.light-mode .message:hover {
+    background: #f9fbfc;
+    transform: translateY(-1px);
+}
+
+body.light-mode .message.sent {
+    background: #d9f8c4;
+    margin-left: auto;
+}
+
+body.light-mode .message.received {
+    background: #ffffff;
+    margin-right: auto;
+}
+
+body.light-mode .message.system {
+    background: #f2f2f2;
+    color: #555;
+}
+
+body.light-mode .message.deleted {
+    background: #f2f2f2;
+    color: #777;
+}
+
+body.light-mode .message .dropdown-btn {
+    color: #666;
+    transition: background 0.2s ease;
+}
+
+body.light-mode .message .dropdown-btn:hover {
+    background: #e0e4e8;
+}
+
+body.light-mode .dropdown-content {
+    background: #ffffff;
+    border: 1px solid #e8ecef;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .dropdown-content button {
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+body.light-mode .dropdown-content button:hover {
+    background: #f0f3f5;
+}
+
+body.light-mode .message .reply-info {
+    background: #f5f5f5;
+    color: #555;
+    border-radius: 8px;
+}
+
+body.light-mode .input-area {
+    background: #ffffff;
+    border-top: 1px solid #e8ecef;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+    transform: translateY(-5px);
+}
+
+body.light-mode .input-area button {
+    background: #075e54;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.light-mode .input-area button:hover {
+    background: #054d44;
+    transform: scale(1.05);
+}
+
+body.light-mode .reply-preview {
+    background: #fafafa;
+    border-left: 4px solid #075e54;
+    border-radius: 8px;
+}
+
+body.light-mode #reply-content {
+    color: #555;
+}
+
+body.light-mode .reply-preview button {
+    color: #666;
+    transition: background 0.2s ease;
+}
+
+body.light-mode .reply-preview button:hover {
+    background: #e0e4e8;
+}
+
+body.light-mode #message-input {
+    background: #fafafa;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+body.light-mode #message-input:focus {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .emoji-btn {
+    background: #ffffff;
+    color: #666;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.light-mode .emoji-btn:hover {
+    background: #f0f3f5;
+    transform: scale(1.05);
+}
+
+body.light-mode #emoji-picker {
+    background: #fafafa;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+}
+
+body.light-mode #emoji-picker span:hover {
+    background: #e4e8ec;
+    transform: scale(1.1);
+}
+
+body.light-mode #file-picker {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+}
+
+body.light-mode #file-picker button {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body.light-mode #file-picker button:hover {
+    background: linear-gradient(135deg, #f0f2f5 0%, #e9ecef 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #contacts .contact-dropdown-btn {
+    color: #666;
+    transition: background 0.2s ease;
+}
+
+body.light-mode #contacts .contact-dropdown-btn:hover {
+    background: #e0e4e8;
+}
+
+body.light-mode #contacts .contact-dropdown-content {
+    background: #ffffff;
+    border: 1px solid #e8ecef;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #contacts .contact-dropdown-content button {
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+body.light-mode #contacts .contact-dropdown-content button:hover {
+    background: #f0f3f5;
+}
+
+body.light-mode #my-friend-code {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #075e54;
+    background: #f9fbfc;
+    border-bottom: 1px solid #eef1f5;
+    margin: 0 0 10px 0;
+    border-radius: 8px;
+}
+
+body.light-mode .file-btn {
+    background: #ffffff;
+    color: #666;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.light-mode .file-btn:hover {
+    background: #f0f3f5;
+    transform: scale(1.05);
+}
+
+body.light-mode .logout-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.light-mode .logout-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+/* Tela de Autenticação - Modo Claro */
+body.light-mode .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #075e54 0%, #087d6e 100%);
+}
+
+body.light-mode .auth-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+body.light-mode .auth-box h1 {
+    font-size: 2em;
+    color: #075e54;
+    margin-bottom: 10px;
+}
+
+body.light-mode .auth-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+body.light-mode .auth-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #dfe3e8;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-mode .auth-box input:focus {
+    border-color: #075e54;
+    box-shadow: 0 0 5px rgba(7, 94, 84, 0.2);
+}
+
+body.light-mode .auth-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+body.light-mode .auth-buttons button {
+    flex: 1;
+    background: #075e54;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.light-mode .auth-buttons #login-btn:hover {
+    background: #054d44;
+    transform: translateY(-2px);
+}
+
+body.light-mode .auth-buttons #register-btn {
+    background: #e8ecef;
+    color: #075e54;
+}
+
+body.light-mode .auth-buttons #register-btn:hover {
+    background: #d0d5d9;
+    transform: translateY(-2px);
+}
+
+/* Modo Noturno */
+body.dark-mode {
+    background: #0d0d0d;
+    color: #e8ecef;
+}
+
+body.dark-mode .container {
+    background: #1f1f1f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+body.dark-mode .sidebar {
+    background: #1f1f1f;
+    border-right: 1px solid #2a2a2a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .sidebar-header {
+    background: linear-gradient(135deg, #1a3c34 0%, #22524a 100%);
+    color: #e8ecef;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #nickname-area {
+    background: #1f1f1f;
+}
+
+body.dark-mode #nickname-area button {
+    background: #1a3c34;
+    color: #e8ecef;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode #nickname-area button:hover {
+    background: #16332c;
+    transform: translateY(-1px);
+}
+
+body.dark-mode #nickname-area button:disabled {
+    background: #455a64;
+    cursor: not-allowed;
+}
+
+body.dark-mode #nickname-input {
+    border: 1px solid #3a3a3a;
+    background: #2a2a2a;
+    color: #e8ecef;
+    border-radius: 25px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode #nickname-input:focus {
+    border-color: #1a3c34;
+    box-shadow: 0 0 5px rgba(26, 60, 52, 0.3);
+}
+
+body.dark-mode #contacts li {
+    border-bottom: 1px solid #2a2a2a;
+    transition: background 0.2s ease, padding 0.2s ease;
+}
+
+body.dark-mode #contacts li:hover {
+    background: #282828;
+    padding-left: 18px;
+}
+
+body.dark-mode #add-contact-btn {
+    background: #1a3c34;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode #add-contact-btn:hover {
+    background: #16332c;
+    transform: translateY(-1px);
+}
+
+body.dark-mode .chat {
+    background: #151515;
+}
+
+body.dark-mode .chat-header {
+    background: linear-gradient(135deg, #1a3c34 0%, #22524a 100%);
+    color: #e8ecef;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .message {
+    background: #2a2a2a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+body.dark-mode .message:hover {
+    background: #303030;
+    transform: translateY(-1px);
+}
+
+body.dark-mode .message.sent {
+    background: #054d44;
+    margin-left: auto;
+}
+
+body.dark-mode .message.received {
+    background: #2a2a2a;
+    margin-right: auto;
+}
+
+body.dark-mode .message.system {
+    background: #353535;
+    color: #bbb;
+}
+
+body.dark-mode .message.deleted {
+    background: #353535;
+    color: #888;
+}
+
+body.dark-mode .message .dropdown-btn {
+    color: #bbb;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode .message .dropdown-btn:hover {
+    background: #404040;
+}
+
+body.dark-mode .dropdown-content {
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .dropdown-content button {
+    color: #e8ecef;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode .dropdown-content button:hover {
+    background: #353535;
+}
+
+body.dark-mode .message .reply-info {
+    background: #353535;
+    color: #bbb;
+    border-radius: 8px;
+}
+
+body.dark-mode .input-area {
+    background: #1f1f1f;
+    border-top: 1px solid #2a2a2a;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+body.dark-mode .input-area button {
+    background: #1a3c34;
+    color: #e8ecef;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode .input-area button:hover {
+    background: #16332c;
+    transform: scale(1.05);
+}
+
+body.dark-mode .reply-preview {
+    background: #2a2a2a;
+    border-left: 4px solid #1a3c34;
+    border-radius: 8px;
+}
+
+body.dark-mode #reply-content {
+    color: #e8ecef;
+}
+
+body.dark-mode .reply-preview button {
+    color: #bbb;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode .reply-preview button:hover {
+    background: #404040;
+}
+
+body.dark-mode #message-input {
+    background: #2a2a2a;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: #e8ecef;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode #message-input:focus {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .emoji-btn {
+    background: #2a2a2a;
+    color: #bbb;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.dark-mode .emoji-btn:hover {
+    background: #353535;
+    transform: scale(1.05);
+}
+
+body.dark-mode #emoji-picker {
+    background: #222222;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+}
+
+body.dark-mode #emoji-picker span:hover {
+    background: #3a3a3a;
+    transform: scale(1.1);
+}
+
+body.dark-mode #file-picker {
+    background: linear-gradient(135deg, #2a2a2a 0%, #212121 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+}
+
+body.dark-mode #file-picker button {
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+    color: #e8ecef;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode #file-picker button:hover {
+    background: linear-gradient(135deg, #3a3a3a 0%, #2f2f2f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #contacts .contact-dropdown-btn {
+    color: #bbb;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode #contacts .contact-dropdown-btn:hover {
+    background: #404040;
+}
+
+body.dark-mode #contacts .contact-dropdown-content {
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode #contacts .contact-dropdown-content button {
+    color: #e8ecef;
+    transition: background 0.2s ease;
+}
+
+body.dark-mode #contacts .contact-dropdown-content button:hover {
+    background: #353535;
+}
+
+body.dark-mode #my-friend-code {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #e8ecef;
+    background: #282828;
+    border-bottom: 1px solid #2a2a2a;
+    margin: 0 0 10px 0;
+    border-radius: 8px;
+}
+
+body.dark-mode .file-btn {
+    background: #2a2a2a;
+    color: #bbb;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.dark-mode .file-btn:hover {
+    background: #353535;
+    transform: scale(1.05);
+}
+
+body.dark-mode .logout-btn {
+    background: none;
+    border: none;
+    color: #e8ecef;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.dark-mode .logout-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+/* Tela de Autenticação - Modo Escuro */
+body.dark-mode .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a3c34 0%, #22524a 100%);
+}
+
+body.dark-mode .auth-box {
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode .auth-box h1 {
+    font-size: 2em;
+    color: #e8ecef;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .auth-box p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .auth-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #3a3a3a;
+    background: #353535;
+    color: #e8ecef;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .auth-box input:focus {
+    border-color: #1a3c34;
+    box-shadow: 0 0 5px rgba(26, 60, 52, 0.3);
+}
+
+body.dark-mode .auth-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+body.dark-mode .auth-buttons button {
+    flex: 1;
+    background: #1a3c34;
+    color: #e8ecef;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark-mode .auth-buttons #login-btn:hover {
+    background: #16332c;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .auth-buttons #register-btn {
+    background: #353535;
+    color: #e8ecef;
+}
+
+body.dark-mode .auth-buttons #register-btn:hover {
+    background: #404040;
+    transform: translateY(-2px);
+}
+
+/* Estilos Gerais */
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    transition: all 0.4s ease;
+}
+
+.sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 15px 20px;
+    font-size: 1.5em;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin: 0;
+}
+
+.sidebar-header div {
+    display: flex;
+    gap: 10px;
+}
+
+.mode-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+#nickname-area {
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+#nickname-area.hidden {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nickname-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    min-width: 0;
+}
+
+#contacts-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+#contacts-area.visible {
+    opacity: 1;
+}
+
+#contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#contacts li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: visible;
+    border-radius: 6px;
+}
+
+#contacts li span {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#add-contact-btn {
+    padding: 12px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s ease;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.chat {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#room-title {
+    display: block;
+}
+
+#room-subtitle {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+#typing-indicator {
+    font-size: 0.9em;
+    color: #e0e0e0;
+    font-style: italic;
+    margin-top: 2px;
+    display: none;
+    opacity: 0.8;
+}
+
+#messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative; /* Adicionado para contenção */
+    contain: content; /* Garante que os elementos filhos respeitem os limites */
+}
+
+.message {
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    position: relative;
+    transition: background 0.2s ease;
+    z-index: 1;
+    box-sizing: border-box; /* Garante que padding não ultrapasse limites */
+}
+
+.message a {
+    color: rgba(96, 170, 255);
+}
+
+.message.sent.new {
+    animation: slideIn 0.3s ease-out;
+}
+
+.message .dropdown {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.message .dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    position: absolute;
+    z-index: 9999;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    display: none;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: block;
+}
+
+.message .reply-info {
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+#contacts .contact-dropdown {
+    position: relative;
+    margin-left: 10px;
+}
+
+#contacts .contact-dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contacts .contact-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 120px;
+}
+
+#contacts .contact-dropdown-content.show {
+    display: block;
+}
+
+#contacts .contact-dropdown-content button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.input-area {
+    padding: 10px 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.reply-preview {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+#reply-content {
+    flex: 1;
+    font-size: 0.9em;
+}
+
+.reply-preview button {
+    background: none;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1em;
+    min-width: 0;
+    height: 36px;
+}
+
+button {
+    padding: 12px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.input-area button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.input-area button i {
+    font-size: 16px;
+}
+
+.emoji-btn {
+    width: 36px;
+    height: 36px;
+}
+
+.file-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#emoji-picker {
+    position: absolute;
+    bottom: 65px;
+    left: 20px;
+    width: 300px;
+    max-height: 250px;
+    border-radius: 20px;
+    padding: 15px;
+    overflow-y: auto;
+    display: none;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    animation: slide-up 0.2s ease-in-out;
+}
+
+#emoji-picker span {
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+#file-picker {
+    position: absolute;
+    bottom: 65px;
+    left: 60px;
+    width: 200px;
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+    z-index: 3000; /* Aumentado para ficar acima das mensagens */
+    animation: slide-up 0.2s ease-in-out;
+}
+
+#file-picker button {
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.read-check {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+body.light-mode .read-check {
+    color: #666;
+}
+
+body.light-mode .read-check.delivered {
+    color: #666;
+}
+
+body.light-mode .read-check.read {
+    color: #00f;
+}
+
+body.dark-mode .read-check {
+    color: #999;
+}
+
+body.dark-mode .read-check.delivered {
+    color: #999;
+}
+
+body.dark-mode .read-check.read {
+    color: rgb(96, 170, 255);
+}
+
+#set-alias-btn {
+    background: #075e54;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 10px 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#set-alias-btn:hover {
+    background: #054d44;
+    transform: translateY(-1px);
+}
+
+body.dark-mode #set-alias-btn {
+    background: #1a3c34;
+}
+
+body.dark-mode #set-alias-btn:hover {
+    background: #16332c;
+    transform: translateY(-1px);
+}
+
+/* Estilos da Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.modal-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.modal-content {
+    position: relative;
+    width: 70vw;
+    max-width: 90%;
+    max-height: 90vh;
+    background: none;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#modal-video {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #075e54 0%, #087d6e 100%);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 1002;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #054d44 0%, #075e54 100%);
+    transform: translateY(-2px);
+}
+
+body.dark-mode .download-btn {
+    background: linear-gradient(135deg, #1a3c34 0%, #22524a 100%);
+}
+
+body.dark-mode .download-btn:hover {
+    background: linear-gradient(135deg, #16332c 0%, #1a3c34 100%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-width: unset;
+        max-height: 40%;
+    }
+
+    .chat {
+        width: 100%;
+        height: auto;
+        flex: 1;
+    }
+
+    .sidebar-header, .chat-header {
+        padding: 12px 15px;
+        height: 50px;
+        font-size: 1.3em;
+    }
+
+    #nickname-area, #contacts-area {
+        padding: 15px;
+    }
+
+    #add-contact-btn {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    #contacts li {
+        padding: 12px;
+    }
+
+    .input-area {
+        padding: 8px 15px;
+    }
+
+    #message-input {
+        padding: 6px 12px;
+        height: 32px;
+    }
+
+    .input-area button, .emoji-btn, .file-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    #messages {
+        padding: 15px;
+    }
+
+    .message {
+        max-width: 80%;
+    }
+
+    #emoji-picker {
+        width: 240px;
+        max-height: 200px;
+        bottom: 55px;
+    }
+
+    #file-picker {
+        width: 180px;
+        max-height: 200px;
+        bottom: 55px;
+        left: 50px;
+    }
+
+    .dropdown-content {
+        min-width: 120px;
+    }
+
+    #contacts .contact-dropdown-content {
+        min-width: 100px;
+    }
+
+    .modal-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90vw;
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    .download-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .auth-box {
+        padding: 30px;
+        max-width: 350px;
+    }
+
+    .auth-box h1 {
+        font-size: 1.8em;
+    }
+
+    .auth-box input {
+        padding: 10px 12px;
+    }
+
+    .auth-buttons button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        max-height: 50%;
+    }
+
+    .chat {
+        flex: 1;
+    }
+
+    .sidebar-header, .chat-header {
+        padding: 10px 12px;
+        height: 45px;
+        font-size: 1.1em;
+    }
+
+    #nickname-area {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    #nickname-input {
+        width: 100%;
+    }
+
+    #nickname-area button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #contacts-area {
+        padding: 10px;
+    }
+
+    #add-contact-btn {
+        margin-bottom: 10px;
+    }
+
+    #contacts li {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .input-area {
+        padding: 6px 10px;
+    }
+
+    #message-input {
+        padding: 5px 10px;
+        height: 30px;
+    }
+
+    .input-area button, .emoji-btn, .file-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    #messages {
+        padding: 10px;
+    }
+
+    #emoji-picker {
+        width: 200px;
+        max-height: 180px;
+        bottom: 50px;
+    }
+
+    #file-picker {
+        width: 150px;
+        max-height: 180px;
+        bottom: 50px;
+        left: 40px;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+    }
+
+    #contacts .contact-dropdown-content {
+        min-width: 90px;
+    }
+
+    .modal-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .modal-content {
+        width: 95vw;
+        max-width: 98%;
+        max-height: 75vh;
+    }
+
+    .download-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .auth-box {
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .auth-box h1 {
+        font-size: 1.5em;
+    }
+
+    .auth-box p {
+        font-size: 0.9em;
+    }
+
+    .auth-box input {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .auth-buttons button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

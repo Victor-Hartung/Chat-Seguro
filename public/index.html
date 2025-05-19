@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Seguro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <!-- Tela de Login/Registro -->
+    <div id="auth-screen" class="auth-container">
+        <div class="auth-box">
+            <h1>Chat Seguro</h1>
+            <p>Bem-vindo! Faça login ou registre-se para começar.</p>
+            <input type="text" id="auth-id" placeholder="E-mail ou Número de Telefone" maxlength="50">
+            <input type="text" id="auth-username" placeholder="Nome de Usuário (apenas registro)" maxlength="20" style="display: none;">
+            <input type="password" id="auth-password" placeholder="Senha" maxlength="20">
+            <div class="auth-buttons">
+                <button id="login-btn" onclick="login()">Login</button>
+                <button id="register-btn" onclick="toggleRegister()">Registrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interface do Chat -->
+    <div id="chat-container" class="container" style="display: none;">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span>Chat Seguro</span>
+                <div>
+                    <button class="mode-toggle" onclick="toggleMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="contacts-area" class="visible">
+                <p id="my-friend-code">Seu código de amizade: ---</p>
+                <button id="add-contact-btn" onclick="addContact()">Adicionar Contato</button>
+                <ul id="contacts"></ul>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-header">
+                <span id="room-title">Selecione um chat</span>
+                <span id="room-subtitle" style="font-size: 0.8em; opacity: 0.7;"></span>
+            </div>
+            <div id="messages"></div>
+            <div class="input-area">
+                <div id="reply-preview" style="display: none;">
+                    <span id="reply-content"></span>
+                    <button onclick="cancelReply()"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="input-line">
+                    <button class="emoji-btn" onclick="toggleEmojiPicker(event)">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                    <div id="emoji-picker" style="display: none;"></div>
+                    <button class="file-btn" onclick="toggleFilePicker()">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <div id="file-picker" style="display: none;"></div>
+                    <input type="file" id="file-input" style="display: none;">
+                    <input type="text" id="message-input" placeholder="Digite uma mensagem">
+                    <button onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para visualização de mídia -->
+    <div id="media-modal" class="modal">
+        <div class="modal-container">
+            <div class="modal-content">
+                <img id="modal-image" style="display: none;" />
+                <video id="modal-video" controls style="display: none;"></video>
+            </div>
+            <button class="download-btn"><i class="fas fa-download"></i></button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
